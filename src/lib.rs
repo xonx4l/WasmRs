@@ -15,3 +15,9 @@ pub struct universe {
     width: u32,
     cells: Vec<Cell>,
 }
+
+impl universe {
+    fn get_index(&self , width: u32,height: u32) -> usize {
+      (row * self.width + column) as usize 
+    }
+}
