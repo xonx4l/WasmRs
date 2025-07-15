@@ -10,4 +10,8 @@ pub enum cell {
     Alive = 1,
 }
 
-
+pub struct universe {
+    height: u32,
+    width: u32,
+    cells: Vec<Cell>,
+}
