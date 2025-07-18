@@ -29,3 +29,12 @@ pub fn estimated_spaceship() -> Universe {
     universe.set_cells(&[(1,2), (2,0), (2,1), (2,2), (3,4)]);
     universe 
 }
+
+[wasm_bindgen_test]
+pub fn test_tick() {
+    let mut input_universe = input_spaceship();
+    let estimated_spaceship = estimated_spaceship();
+
+    input_universe.tick();
+    assert_eq(&input_spaceship.get_cells(), &estimated_spaceship().get_cells());
+}
