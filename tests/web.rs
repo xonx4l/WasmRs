@@ -21,3 +21,11 @@ pub fn input_spaceship() -> Universe {
     universe.set_cells(&[(1,2), (2,3), (3,1), (3,2),(3,3)]);
     universe
 }
+
+pub fn estimated_spaceship() -> Universe {
+    let mut universe = Universe::new();
+    universe.set_width(6);
+    universe.set_height(6);
+    universe.set_cells(&[(1,2), (2,0), (2,1), (2,2), (3,4)]);
+    universe 
+}
